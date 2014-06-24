@@ -4,6 +4,20 @@ a:hover { color: #4B58A6; }
 #map_canvas img {
   max-width: none;
 }
+
+/* MODIFY the web colors of legend left, middle, and right below if desired */
+#legend-left { border-top: 10px solid #F7EDF1; }
+#legend-middle { border-top: 10px solid #E7CAD9; }
+#legend-right { border-top: 10px solid #C7A4B5; }
+#demographics-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
+#demographics-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
+
+.filter-yellow { background-color: #FBF358; }
+.filter-green { background-color: #00E13C; }
+.filter-blue { background-color: #5781FC; }
+.filter-purple { background-color: #7C54FB; }
+.filter-red { background-color: #FB6353; }
+
 /* remove markers before unordered list */
 ul.unstyled {list-style-type:none;}
 /* blocking and spacing for polygon list*/
@@ -22,17 +36,4 @@ ul.unstyled {list-style-type:none;}
      -moz-background-clip: padding;
           background-clip: padding-box; 
 }
-
-#demographics-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
-#demographics-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
-#legend-left { border-top: 10px solid #F7EDF1; }
-#legend-middle { border-top: 10px solid #E7CAD9; }
-#legend-right { border-top: 10px solid #C7A4B5; }
-
-.filter-yellow { background-color: #FBF358; }
-.filter-green { background-color: #00E13C; }
-.filter-blue { background-color: #5781FC; }
-.filter-purple { background-color: #7C54FB; }
-.filter-red { background-color: #FB6353; }
-
 canvas {-ms-touch-action: double-tap-zoom;}
