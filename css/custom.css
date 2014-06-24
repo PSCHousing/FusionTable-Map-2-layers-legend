@@ -24,10 +24,10 @@ ul.unstyled {list-style-type:none;}
           background-clip: padding-box; 
 }
 
-/* Columns */
+/* Columns 
 .c3l { float: left; }
 .c3l { margin-right: 3%; }
-.c3l { width: 31%; }
+.c3l { width: 31%; } */
 
 /* Options 
 .options-v { list-style: none; margin: 0 0 1em 0; padding: 0; }
