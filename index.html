@@ -62,33 +62,33 @@
             
             <!--MODIFY Point layer legend heading, labels (such as Interdistrict), and colors (green, blue, yellow, red, purple) to match your data -->
             <h4>
-              Point layer
+              Schools (point layer)
             </h4>
             <ul class='inputs-list unstyled'>
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType1' />
                   <span class='filter-box filter-green'></span>
-                  Interdistrict schools  <!--This label can be modified from actual data entry ("Interdistrict") -->
+                  Interdistrict  <!--MODIFY to display as desired; not necessarily same as database heading -->
                 </label>
               </li>
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType2' />
                   <span class='filter-box filter-blue'></span>
-                  District schools
+                  District
                 </label>
               </li>
               <li>
                 <label class='checkbox inline'>
                   <input type='checkbox' id='cbType3' />
                   <span class='filter-box filter-yellow'></span>
-                  More PreK centers
+                  More PreK
                 </label>
               </li>
             </ul>
             <!--MODIFY Polygon layers legend heading, labels (such as Polygon layer 1) to match your data, and related items in maps_lib.js file -->
-            <h4>Polygon layers</h4>
+            <h4>Census est 2008-12 (polygon layers)</h4>
             	<ul class='inputs-list unstyled'>
               	<ol id='polygon-legend'>
 			<li id='legend-left'></li>
@@ -99,13 +99,13 @@
               <li>
                 <label class='radio inline'>
                   <input type='radio' name='types' id='rbPolygon1' checked /><!--MODIFY to remove default checked button-->
-                  Polygon layer 1
+                  Median Household Income
                 </label>
               </li>
               <li>
                 <label class='radio inline'>
                   <input type='radio' name='types' id='rbPolygon2' />
-                  Polygon layer 2
+                  Unemployment Rate
                 </label>
               </li>
               <li>
@@ -136,8 +136,7 @@
           </noscript>
           <div id='map_canvas'></div>
           <!--MODIFY link to publicly display your Google Fusion Tables data table, source, and text-->
-          <p>Data sources: <a href='https://www.google.com/fusiontables/DataSource?docid=1ga2XDlXm5uoH5Dx_jKWrMn-BgBGYsSnSRqDWBYou' target='blank'>view point data</a> from <a href='http://smartchoices.trincoll.edu' target='_blank'>SmartChoices</a></br>
-          Polygon1 data from TBA; Polygon2 data from TBA</br>
+          <p>Data sources: <a href='https://www.google.com/fusiontables/DataSource?docid=1ga2XDlXm5uoH5Dx_jKWrMn-BgBGYsSnSRqDWBYou' target='_blank'>view point data</a> from <a href='http://smartchoices.trincoll.edu' target='_blank'>SmartChoices</a>; <a href='https://www.google.com/fusiontables/DataSource?docid=1J4icqZYUUWrjbd5QrlJWBv9Ax5LeV745AnWhNTl3#rows:id=1' target='_blank'>view Median Household Income</a> and <a href="https://www.google.com/fusiontables/DataSource?docid=1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_#rows:id=1" target="_blank">view Unemployment data</a> from <a href="http://factfinder2.census.gov/" target="_blank">US Census, American Community Survey 5-year estimates, 2008-12</a>; Map boundaries from <a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries" target="_blank">MAGIC at UConn Libraries</a></br>
           Visualization by <a href='http://commons.trincoll.edu/dataviz' target='_blank'>DataViz at Trinity College</a>, based on <a href='http://derekeder.com/searchable_map_template/' target='_blank'>Searchable Map Template</a> by <a href='http://derekeder.com' target='_blank'>Derek Eder</a></p>
         </div>
       </div>
