@@ -5,10 +5,10 @@ a:hover { color: #4B58A6; }
   max-width: none;
 }
 
-/* remove markers in front of unordered list */
+/* remove markers in front of unordered list 
 ul.unstyled {list-style-type:none;}
-/* trying to avoid display:block for polygon layers, probably unneeded*/
-.radio {display:compact;}
+/* trying to avoid display:block for polygon layers, probably unneeded
+.radio {display:compact;} */
 
 .filter-box { 
   height: 15px; 
@@ -29,12 +29,12 @@ ul.unstyled {list-style-type:none;}
 .c3l { margin-right: 3%; }
 .c3l { width: 31%; }
 
-/* Options */
+/* Options 
 .options-v { list-style: none; margin: 0 0 1em 0; padding: 0; }
 td .options-v { margin: 0; }
 .options-v input { margin-bottom: -0.05em; }
 .options-v li { padding-left: 25px; text-indent: -25px; }
-.options-v li p { margin: 0; text-indent: 0; }
+.options-v li p { margin: 0; text-indent: 0; } */
 
 #demographics-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
 #demographics-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
