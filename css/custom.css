@@ -5,12 +5,12 @@ a:hover { color: #4B58A6; }
   max-width: none;
 }
 
-/* MODIFY the web colors of legend left, middle, and right below if desired */
+/* MODIFY polygon legend colors (left, middle, right) to match 3-color scheme of polygons in Google Fusion Tables*/
+#polygon-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
+#polygon-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
 #legend-left { border-top: 10px solid #F7EDF1; }
 #legend-middle { border-top: 10px solid #E7CAD9; }
 #legend-right { border-top: 10px solid #C7A4B5; }
-#demographics-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
-#demographics-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
 
 .filter-yellow { background-color: #FBF358; }
 .filter-green { background-color: #00E13C; }
