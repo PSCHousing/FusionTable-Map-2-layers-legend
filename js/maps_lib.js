@@ -28,8 +28,8 @@ var MapsLib = {
   //NOTE: numeric IDs will be depricated soon
   fusionTableId:      "1ga2XDlXm5uoH5Dx_jKWrMn-BgBGYsSnSRqDWBYou", //Point data layer
   
-  polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
-  polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
+  polygon1TableID:    "1J4icqZYUUWrjbd5QrlJWBv9Ax5LeV745AnWhNTl3", //Median Household Income in CT Towns, ACS est 2008-12
+  polygon2TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -81,8 +81,8 @@ var MapsLib = {
 
     MapsLib.searchrecords = null;
 
-    //MODIFY to initial values of the pre-checked polygon?
-    MapsLib.setDemographicsLabels("0&ndash;20%", "20&ndash;40%", "40&ndash;62%");
+    //MODIFY to match 3-bucket GFT values of pre-checked polygon1  - see also further below
+    MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k");
 
     // MODIFY if needed: defines background polygon1 and polygon2 layers
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
@@ -126,11 +126,11 @@ var MapsLib = {
     // MODIFY if needed: shows background polygon layer depending on which checkbox is selected
     if ($("#rbPolygon1").is(':checked')) {
       MapsLib.polygon1.setMap(map);
-      MapsLib.setDemographicsLabels("0&ndash;20%", "20&ndash;40%", "40&ndash;62%"); //MODIFY
+      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
-      MapsLib.setDemographicsLabels("0&ndash;7%", "7&ndash;14%", "14&ndash;22%"); //MODIFY
+      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
