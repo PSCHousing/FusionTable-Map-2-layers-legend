@@ -5,6 +5,24 @@ a:hover { color: #4B58A6; }
   max-width: none;
 }
 
+/* MODIFY polygon legend colors (left, middle, right) to match 3-color scheme of polygons in Google Fusion Tables*/
+#legend-left { border-top: 10px solid #F7EDF1; }
+#legend-middle { border-top: 10px solid #E7CAD9; }
+#legend-right { border-top: 10px solid #C7A4B5; }
+#polygon-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
+#polygon-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
+
+.filter-yellow { background-color: #FBF358; }
+.filter-green { background-color: #00E13C; }
+.filter-blue { background-color: #5781FC; }
+.filter-purple { background-color: #7C54FB; }
+.filter-red { background-color: #FB6353; }
+
+/* remove markers before unordered list */
+ul.unstyled {list-style-type:none;}
+/* blocking and spacing for polygon list*/
+.radio {display:inline-block; margin-top: 0px; margin-bottom: 0px;} 
+
 .filter-box { 
   height: 15px; 
   width: 15px;  
@@ -18,29 +36,4 @@ a:hover { color: #4B58A6; }
      -moz-background-clip: padding;
           background-clip: padding-box; 
 }
-
-/* Columns */
-.c3l { float: left; }
-.c3l { margin-right: 3%; }
-.c3l { width: 31%; }
-
-/* Options */
-.options-v { list-style: none; margin: 0 0 1em 0; padding: 0; }
-td .options-v { margin: 0; }
-.options-v input { margin-bottom: -0.05em; }
-.options-v li { padding-left: 25px; text-indent: -25px; }
-.options-v li p { margin: 0; text-indent: 0; }
-
-#demographics-legend { background: none; clear: both; margin-bottom: 0.3em; padding: 8px 0 0 0; margin: 15px 0 0 0; list-style: none; }
-#demographics-legend li { width: 32%; float: left; margin: 0 1% 10px 0; white-space: nowrap; text-align: center; font-size: 11px; color: #77787b; }
-#legend-left { border-top: 10px solid #F7EDF1; }
-#legend-middle { border-top: 10px solid #E7CAD9; }
-#legend-right { border-top: 10px solid #C7A4B5; }
-
-.filter-yellow { background-color: #FBF358; }
-.filter-green { background-color: #00E13C; }
-.filter-blue { background-color: #5781FC; }
-.filter-purple { background-color: #7C54FB; }
-.filter-red { background-color: #FB6353; }
-
 canvas {-ms-touch-action: double-tap-zoom;}

@@ -1,11 +1,11 @@
 FusionTable-Map-2-layers-legend
 ===============================
 
-Search-and-Filter Map (with 2 layers: points and polygons, with dynamic legend) that draws data from Google Fusion Tables, based on template by Derek Eder
+Search-and-Filter Map with 2 layers (points and polygons, including dynamic legend), that draws data from Google Fusion Tables, based on template by Derek Eder
 
-Live demo IN PROGRESS at http://jackdougherty.github.io/FusionTable-Map-2-layers-legend
+Live demo at http://jackdougherty.github.io/FusionTable-Map-2-layers-legend
 
-Use this template if you wish to create a Search-and-Filter map that turns on/off at least 2 layers (points and polygons), with a dynamic legend for thematic polygons, and draws data from Google Fusion Tables. The default point map displays a textual legend (A, B, C), with option to switch to numeric (0-100) values. Based on template customized by Derek Eder http://derekeder.com/searchable_map_template/
+Use this template if you wish to create a Search-and-Filter map that turns on/off at least 2 layers (points and polygons), with a dynamic legend for the thematic polygons, and draws data from Google Fusion Tables. The default point map displays a textual legend (A, B, C), with option to switch to numeric (0-100) values. The dynamic polygon legend displays a set of three color blocks (modify in custom.css) with different numerical values (modify in maps_lib.js). Based on template customized by Derek Eder http://derekeder.com/searchable_map_template/, with dynamic legend adapted from his http://chicagobuildings.org/
 
 Basic steps:
 
@@ -13,9 +13,10 @@ Basic steps:
 
 2) Make your own copy of this template: either Fork to your own GitHub account, or Clone in Desktop, or Download a ZIP compressed version to your desktop.
 
-3) Modify two files, following instructions in the code comments, to match your Google Fusion Table data:
+3) Modify three files, following instructions in the code comments, to match your Google Fusion Table data:
 
 - index.html
+- custom.css (located inside the css folder)
 - maps_lib.js (located inside the js folder)
 
 3) Host everything on the web (such as a GitHub repository gh-pages branch)
