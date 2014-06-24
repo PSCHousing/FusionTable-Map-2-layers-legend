@@ -5,10 +5,10 @@ a:hover { color: #4B58A6; }
   max-width: none;
 }
 
-/* remove markers in front of unordered list */
+/* remove markers before unordered list */
 ul.unstyled {list-style-type:none;}
-/* trying to avoid display:block for polygon layers */
-.radio {display:inline-block;} 
+/* blocking and spacing for polygon list*/
+.radio {display:inline-block; margin-top: 0px; margin-bottom: 0px;} 
 
 .filter-box { 
   height: 15px; 
