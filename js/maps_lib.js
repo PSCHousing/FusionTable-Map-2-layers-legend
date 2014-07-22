@@ -30,6 +30,9 @@ var MapsLib = {
   
   polygon1TableID:    "1J4icqZYUUWrjbd5QrlJWBv9Ax5LeV745AnWhNTl3", //Median Household Income in CT Towns, ACS est 2008-12
   polygon2TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
+  polygon3TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
+  polygon4TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
+  polygon5TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -103,6 +106,33 @@ var MapsLib = {
       templateId: 2
     });
 
+ MapsLib.polygon3 = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygon3TableID,
+        select: "geometry"
+      },
+      styleId: 2,
+      templateId: 2
+    });
+    
+     MapsLib.polygon4 = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygon4TableID,
+        select: "geometry"
+      },
+      styleId: 2,
+      templateId: 2
+    });
+    
+     MapsLib.polygon5 = new google.maps.FusionTablesLayer({
+      query: {
+        from:   MapsLib.polygon5TableID,
+        select: "geometry"
+      },
+      styleId: 2,
+      templateId: 2
+    });
+    
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
     var loadRadius = MapsLib.convertToPlainString($.address.parameter('radius'));
@@ -131,6 +161,18 @@ var MapsLib = {
     if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
       MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+    }
+       if ($("#rbPolygon3").is(':checked')) {
+      MapsLib.polygon3.setMap(map);
+      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+    }
+       if ($("#rbPolygon4").is(':checked')) {
+      MapsLib.polygon4.setMap(map);
+      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+    }
+       if ($("#rbPolygon5").is(':checked')) {
+      MapsLib.polygon5.setMap(map);
+      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
@@ -224,6 +266,12 @@ var MapsLib = {
       MapsLib.polygon1.setMap(null);
     if (MapsLib.polygon2 != null)
       MapsLib.polygon2.setMap(null);
+    if (MapsLib.polygon3 != null)
+      MapsLib.polygon3.setMap(null);
+    if (MapsLib.polygon4 != null)
+      MapsLib.polygon4.setMap(null);
+    if (MapsLib.polygon5 != null)
+      MapsLib.polygon5.setMap(null);
     if (MapsLib.polygonOFF !=null)
       MapsLib.polygonOff.setMap(null);
     if (MapsLib.addrMarker != null)
