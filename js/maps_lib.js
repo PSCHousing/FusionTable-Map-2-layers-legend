@@ -28,11 +28,11 @@ var MapsLib = {
   //NOTE: numeric IDs will be depricated soon
   fusionTableId:      "1ga2XDlXm5uoH5Dx_jKWrMn-BgBGYsSnSRqDWBYou", //Point data layer
   
-  polygon1TableID:    "1J4icqZYUUWrjbd5QrlJWBv9Ax5LeV745AnWhNTl3", //Median Household Income in CT Towns, ACS est 2008-12
-  polygon2TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
-  polygon3TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
-  polygon4TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
-  polygon5TableID:    "1Q2x_e-In4-648ggO0KUfCzVHRlyfAAg43ZS8Y8r_", //Unemployment in CT towns, ACS est 2008-12
+  polygon1TableID:    "1ctu0uy-DnWYTFv2gmD_RKZQJRbfjN1ep29aCFEqv", //Median Home Value in CT Towns, ACS est 2008-12
+  polygon2TableID:    "1LSGmuDPA_F9spbd9pzhxUg5VCR07S_UV0mp_CvTU", //Median Gross Rent in CT towns, ACS est 2008-12
+  polygon3TableID:    "1xKD6UBASUZ9tUzpqUmcmWq8_WCKUcF0pMbAHSN6H", //2013 Appeals list, 2013 Appeals list DOH
+  polygon4TableID:    "1Z5TP3t1YWJvzedOinSLvusdRZaNSKZJU7RB_4GiE", //Median Owner Costs, ACS est 2008-12
+  polygon5TableID:    "18QLxCnUTejeWifhzNhu2X_Eko-EDh7b0eDOUH4T2", //Population Projection, 2010 Census
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -85,7 +85,7 @@ var MapsLib = {
     MapsLib.searchrecords = null;
 
     //MODIFY to match 3-bucket GFT values of pre-checked polygon1  - see also further below
-    MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k");
+    MapsLib.setDemographicsLabels("$0&ndash;$250k", "$250k&ndash;$400k", "$400k+");
 
     // MODIFY if needed: defines background polygon1 and polygon2 layers
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
@@ -156,23 +156,23 @@ var MapsLib = {
     // MODIFY if needed: shows background polygon layer depending on which checkbox is selected
     if ($("#rbPolygon1").is(':checked')) {
       MapsLib.polygon1.setMap(map);
-      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("$0&ndash;$250k", "$250k&ndash;$400k", "$400k+"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygon2").is(':checked')) {
       MapsLib.polygon2.setMap(map);
-      MapsLib.setDemographicsLabels("2&ndash;8%", "8&ndash;14%", "14&ndash;21%"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("$0&ndash;$900", "$900&ndash;$1200", "$1200+"); //MODIFY to match 3 buckets in GFT
     }
        if ($("#rbPolygon3").is(':checked')) {
       MapsLib.polygon3.setMap(map);
-      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("0%&ndash;4.99%", "5%&ndash;9.99%", "10%+"); //MODIFY to match 3 buckets in GFT
     }
        if ($("#rbPolygon4").is(':checked')) {
       MapsLib.polygon4.setMap(map);
-      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("$0&ndash;$1600", "$1600&ndash;$2000", "$2000+"); //MODIFY to match 3 buckets in GFT
     }
        if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
-      MapsLib.setDemographicsLabels("$25&ndash;50k", "$50&ndash;100k", "$100&ndash;215k"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("-50%&ndash;-25%", "-25%&ndash;0", "0+"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
