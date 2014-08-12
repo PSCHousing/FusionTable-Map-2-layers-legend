@@ -50,7 +50,7 @@ var MapsLib = {
   recordNamePlural:   "results",
 
   searchRadius:       805,            //in meters ~ 1/2 mile
-  defaultZoom:        10,             //zoom level when map is loaded (bigger is more zoomed in)
+  defaultZoom:        8,             //zoom level when map is loaded (bigger is more zoomed in)
   addrMarkerImage:    'images/blue-pushpin.png',
   currentPinpoint:    null,
 
@@ -172,7 +172,7 @@ var MapsLib = {
     }
        if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
-      MapsLib.setDemographicsLabels("-50%&ndash;-25%", "-25%&ndash;0", "0+"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("-50%&ndash;-15%", "-15%&ndash;0", "0+"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
