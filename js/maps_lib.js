@@ -172,7 +172,7 @@ var MapsLib = {
     }
        if ($("#rbPolygon5").is(':checked')) {
       MapsLib.polygon5.setMap(map);
-      MapsLib.setDemographicsLabels("-50%&ndash;-25%", "-25%&ndash;0", "0+"); //MODIFY to match 3 buckets in GFT
+      MapsLib.setDemographicsLabels("-50%&ndash;-15%", "-15%&ndash;0", "0+"); //MODIFY to match 3 buckets in GFT
     }
     if ($("#rbPolygonOff").is(':checked')) {   //the Off statement does not contain a setMap
       MapsLib.setDemographicsLabels("&ndash;", "&ndash;", "&ndash;");
