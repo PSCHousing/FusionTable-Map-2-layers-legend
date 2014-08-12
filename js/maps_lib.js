@@ -26,7 +26,7 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1ga2XDlXm5uoH5Dx_jKWrMn-BgBGYsSnSRqDWBYou", //Point data layer
+  fusionTableId:      "1PzvhTIEyEdeLRdKKa37YqFLkrt1l59bSHTFN6uNF", //Point data layer
   
   polygon1TableID:    "1ctu0uy-DnWYTFv2gmD_RKZQJRbfjN1ep29aCFEqv", //Median Home Value in CT Towns, ACS est 2008-12
   polygon2TableID:    "1LSGmuDPA_F9spbd9pzhxUg5VCR07S_UV0mp_CvTU", //Median Gross Rent in CT towns, ACS est 2008-12
@@ -42,7 +42,7 @@ var MapsLib = {
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
   //if your Fusion Table has two-column lat/lng data, see https://support.google.com/fusiontables/answer/175922
-  locationColumn:     "Lat",
+  locationColumn:     "geometry",
 
   map_centroid:       new google.maps.LatLng(41.7682,-72.684), //center that your map defaults to
   locationScope:      "connecticut",      //geographical area appended to all address searches
@@ -50,7 +50,7 @@ var MapsLib = {
   recordNamePlural:   "results",
 
   searchRadius:       805,            //in meters ~ 1/2 mile
-  defaultZoom:        12,             //zoom level when map is loaded (bigger is more zoomed in)
+  defaultZoom:        10,             //zoom level when map is loaded (bigger is more zoomed in)
   addrMarkerImage:    'images/blue-pushpin.png',
   currentPinpoint:    null,
 
@@ -186,11 +186,11 @@ var MapsLib = {
   //-----custom filters for point data layer
     //---MODIFY column header and values below to match your Google Fusion Table AND index.html
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
+    var type_column = "'Transportation Type'";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Interdistrict");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("District");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("MorePreK");
+    if ( $("#cbType1").is(':checked')) tempWhereClause.push("CTfastrak");
+    if ( $("#cbType2").is(':checked')) tempWhereClause.push("Shoreline East");
+    if ( $("#cbType3").is(':checked')) tempWhereClause.push("CT Railroad Stations");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
